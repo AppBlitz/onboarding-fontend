@@ -1,5 +1,6 @@
+import { getValueAPIEmployees } from "./functions.js"
 
-function validation() {
+document.getElementById("submit").addEventListener("click", () => {
   const data = document.forms["formUpdateUser"];
   data.nameOne.value = newEmployee.nameOne;
   data.otherName.value = newEmployee.otherName;
@@ -9,23 +10,12 @@ function validation() {
   data.address.value = newEmployee.address;
   data.city.value = newEmployee.city;
   data.postcode.value = newEmployee.postcode;
-  data.position.value = newEmployee.position.name;
-  data.area.value = newEmployee.area.name;
-}
+  data.position.value = newEmployee.position;
+  data.area.value = newEmployee.area;
+})
 
-const newEmployee = {
-  nameOne: "Carlos",
-  otherName: "Fabian",
-  postcode: "110111",
-  firstSurname: "Corrales",
-  secondSurname: "Zapata",
-  telephone: "3001234567",
-  numberEmployee: "EMP-002",
-  address: "Calle 10 #20-30",
-  city: "Medellín",
-  position: "Backend Developer",
-  area: "Engineering",
-};
+
+const newEmployee = getValueAPIEmployees("");
 
 
 
