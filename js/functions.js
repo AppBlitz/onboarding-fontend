@@ -1,6 +1,8 @@
+const url = "http://localhost:8000/empleados/"
+
 async function getValueAPIEmployees(stringURL) {
   try {
-    const response = await fetch(`http://localhost:8000/empleados/${stringURL}/`)
+    const response = await fetch(`${url}${stringURL}/`)
     if (!response.ok) {
       throw new Error(`Response status is:${response.status}`)
     }
@@ -14,7 +16,54 @@ async function getValueAPIEmployees(stringURL) {
   }
 }
 
-export { getValueAPIEmployees }
+
+
+async function saveEmployee(employee) {
+  try {
+    const request = await fetch(url, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        numberEmployee: uuidv4(),
+        nameOne: employee.nameOne,
+        otherName: employee.otherName,
+        firstSurname: employee.firstSurname,
+        secondSurname: employee.secondSurname,
+        telephone: employee.telephone,
+        address: employee.address,
+        city: employee.city,
+        postalCode: employee.postCode,
+        position: employee.position,
+        area: employee.area
+      })
+    });
+
+    const data = await request.json(); // 👈 CLAVE
+
+    if (!request.ok) {
+      console.error("Errores del backend:", data);
+      throw new Error("Datos inválidos");
+    }
+
+    console.log("Empleado guardado:", data);
+
+  } catch (error) {
+    console.error("Error al guardar empleado:", error);
+  }
+}
+
+
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+    .replace(/[xy]/g, function (c) {
+      const r = Math.random() * 16 | 0,
+        v = c == 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+}
+export { getValueAPIEmployees, saveEmployee }
 
 
 
