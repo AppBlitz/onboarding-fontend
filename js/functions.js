@@ -1,4 +1,5 @@
-const url = "http://localhost:8000/empleados/"
+import { API_URL } from "./config";
+const url = API_URL
 
 async function getValueAPIEmployees(stringURL) {
   try {
