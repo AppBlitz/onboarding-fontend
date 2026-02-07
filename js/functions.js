@@ -1,4 +1,4 @@
-import { API_URL } from "./config";
+import { API_URL } from "./config.js";
 const url = API_URL
 
 async function getValueAPIEmployees(stringURL) {
@@ -8,7 +8,6 @@ async function getValueAPIEmployees(stringURL) {
       throw new Error(`Response status is:${response.status}`)
     }
     const result = await response.json();
-    console.log(result)
     return result
 
   } catch (error) {
@@ -41,14 +40,12 @@ async function saveEmployee(employee) {
       })
     });
 
-    const data = await request.json(); // 👈 CLAVE
 
     if (!request.ok) {
-      console.error("Errores del backend:", data);
       throw new Error("Datos inválidos");
     }
 
-    console.log("Empleado guardado:", data);
+    console.log("Empleado guardado:");
 
   } catch (error) {
     console.error("Error al guardar empleado:", error);
