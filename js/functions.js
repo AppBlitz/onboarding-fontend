@@ -1,20 +1,17 @@
-const url = "http://localhost:8000";
-
 async function getValueAPIEmployees(stringURL) {
-  const URL = url + stringURL;
   try {
-
-    const response = await fetch(URL)
+    const response = await fetch(`http://localhost:8000/empleados/${stringURL}/`)
     if (!response.ok) {
       throw new Error(`Response status is:${response.status}`)
     }
     const result = await response.json();
     console.log(result)
+    return result
 
   } catch (error) {
     console.log(error)
+    return null
   }
-  return result
 }
 
 export { getValueAPIEmployees }
