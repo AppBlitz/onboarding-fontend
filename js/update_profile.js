@@ -1,7 +1,11 @@
 import { getValueAPIEmployees } from "./functions.js"
 
 document.getElementById("submit").addEventListener("click", () => {
-  const data = document.forms["formUpdateUser"];
+})
+
+document.getElementById("submitS").addEventListener("click", () => {
+  const value = document.forms["formSearch"]["employeeID"].value;
+  const data = getValueAPIEmployees("/" + value + "/");
   data.nameOne.value = newEmployee.nameOne;
   data.otherName.value = newEmployee.otherName;
   data.firstSurname.value = newEmployee.firstSurname;
@@ -12,10 +16,10 @@ document.getElementById("submit").addEventListener("click", () => {
   data.postcode.value = newEmployee.postcode;
   data.position.value = newEmployee.position;
   data.area.value = newEmployee.area;
+
 })
 
 
-const newEmployee = getValueAPIEmployees("");
 
 
 
