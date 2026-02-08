@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Empleado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Registro de Empleado</h2>
+
+    <form id="registroForm">
+
+      <div class="form-group">
+        <label>Primer nombre</label>
+        <input type="text" name="primer_nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label>Segundo nombre</label>
+        <input type="text" name="segundo_nombre">
+      </div>
+
+      <div class="form-group">
+        <label>Primer apellido</label>
+        <input type="text" name="primer_apellido" required>
+      </div>
+
+      <div class="form-group">
+        <label>Segundo apellido</label>
+        <input type="text" name="segundo_apellido">
+      </div>
+
+      <div class="form-group">
+        <label>Teléfono</label>
+        <input type="tel" name="telefono" required>
+      </div>
+
+      <div class="form-group">
+        <label>Ciudad</label>
+        <select name="ciudad" required>
+          <option value="">Seleccione una ciudad</option>
+          <option>Bogotá</option>
+          <option>Medellín</option>
+          <option>Cali</option>
+          <option>Armenia</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Dirección</label>
+        <input type="text" name="direccion" required>
+      </div>
+
+      <div class="form-group">
+        <label>Código postal</label>
+        <input type="text" name="codigo_postal">
+      </div>
+
+      <div class="form-group">
+        <label>Cargo</label>
+        <input type="text" name="cargo" required>
+      </div>
+
+      <div class="form-group">
+        <label>Área de trabajo</label>
+        <select name="area_trabajo" required>
+          <option value="">Seleccione un área</option>
+          <option>Desarrollo de Software</option>
+          <option>Infraestructura TI</option>
+          <option>QA</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Número de empleado</label>
+        <input type="number" name="numero_empleado" required>
+      </div>
+
+      <button type="submit">Registrar</button>
+    </form>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../js/registro.js"></script>
+
+</body>
+</html>
