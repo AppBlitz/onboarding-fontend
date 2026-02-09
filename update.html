@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link href="css/update_profile.css" rel="stylesheet">
-  </head>
-  <body>
-    <div>
-      <label>Buscar empleado por identificación</label>
-      <form id="formSearch">
-      <input type="text" id="employeeID"/>
-      <input  type="button" id="submitS" value="Buscar"/>
-      </form>
-    </div>
-    <form id="formUpdateUser">
-      <section>
-        <h3>Datos personales</h3>
-    <div>
-      <label>Primer nombre</label>
-      <input type="text" id="nameOne" />
-        </div>
-        <div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="css/update_profile.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class = "formulario">
+    <label>Buscar empleado por identificación</label>
+    <form id="formSearch">
+      <input type="text" id="employeeID" />
+      <input type="button" id="submitS" value="Buscar" />
+    </form>
+  </div>
+  <div class = "formulario">
+  <form id="formUpdateUser">
+    <section>
+      <h3>Datos personales</h3>
+      <div>
+        <label>Primer nombre</label>
+        <input type="text" id="nameOne" />
+      </div>
+      <div>
         <label>Segundo nombre</label>
         <input type="text" id="otherName" />
       </div>
@@ -31,35 +34,37 @@
       </div>
       <div>
         <label>Segundo apellido</label>
-        <input type="text" id="secondSurname"/>
+        <input type="text" id="secondSurname" />
       </div>
       <div>
-          <label>Telefono</label>
-          <input type="text" id="telephone"/>
+        <label>Telefono</label>
+        <input type="text" id="telephone" />
       </div>
-        <div>
-          <label>Dirección</label>
-          <input type="text" id="address"/>
-        </div>
-        <div>
-          <label>Ciudad</label>
-          <input type="text" id="city"/>
-        </div>
-        <div>
-          <label>Codigo postal</label>
-          <input type="text" id="postcode"/>
-        </div>
-        <div>
-          <label>posición</label>
-          <input type="text" id="position" />
-        </div>
-        <div>
-          <label>Area</label>
-          <input type="text" id="area"/>
-        </div>
-      </section>
-      <input type="button" value="submit" id="submit"/>
-    </form>
-    <script type="module"src="js/update_profile.js" defer></script>
-  </body>
+      <div>
+        <label>Dirección</label>
+        <input type="text" id="address" />
+      </div>
+      <div>
+        <label>Ciudad</label>
+        <input type="text" id="city" />
+      </div>
+      <div>
+        <label>Codigo postal</label>
+        <input type="text" id="postcode" />
+      </div>
+      <div>
+        <label>posición</label>
+        <input type="text" id="position" />
+      </div>
+      <div>
+        <label>Area</label>
+        <input type="text" id="area" />
+      </div>
+    </section>
+    <input type="button" value="submit" id="submit" />
+  </form>
+  <script type="module" src="js/update_profile.js" defer></script>
+  </div>
+</body>
+
 </html>
