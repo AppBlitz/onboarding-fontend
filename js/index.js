@@ -13,6 +13,7 @@ document.getElementById("button_save_user").addEventListener("click", () => {
     city: valueForm.city.value,
     postCode: valueForm.postcode.value,
     position: valueForm.position.value,
+    numberEmployee: valueForm.numberEmployee.value,
     area: valueForm.area.value
   }
   saveEmployee(createObject)

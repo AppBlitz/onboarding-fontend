@@ -26,7 +26,7 @@ async function saveEmployee(employee) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        numberEmployee: uuidv4(),
+        numberEmployee: employee.numberEmployee,
         nameOne: employee.nameOne,
         otherName: employee.otherName,
         firstSurname: employee.firstSurname,
@@ -36,7 +36,7 @@ async function saveEmployee(employee) {
         city: employee.city,
         postalCode: employee.postCode,
         position: employee.position,
-        area: employee.area
+        area: employee.area,
       })
     });
 
@@ -53,14 +53,6 @@ async function saveEmployee(employee) {
 }
 
 
-function uuidv4() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
-    .replace(/[xy]/g, function (c) {
-      const r = Math.random() * 16 | 0,
-        v = c == 'x' ? r : (r & 0x3 | 0x8);
-      return v.toString(16);
-    });
-}
 export { getValueAPIEmployees, saveEmployee }
 
 
